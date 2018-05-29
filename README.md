@@ -13,6 +13,7 @@ OCR-Manga has a few dependencies you will need:
     in their package repositories.
 - [pillow](https://github.com/python-pillow/Pillow)
 - [pyocr](https://github.com/jflesch/pyocr)
+- [ConfigObj](https://github.com/DiffSK/configobj)
 - [magic](https://github.com/ahupp/python-magic)
 - [myougiden](https://github.com/leoboiko/myougiden)
 - [rarfile](https://github.com/markokr/rarfile)
@@ -22,7 +23,7 @@ Ubuntu/Debian
 
 Install pip, Tk, and Tesseract:
 
-`sudo apt-get install python3-pip python3-tk tesseract-ocr tesseract-ocr-jpn`
+`sudo apt-get install python3-pip python3-configobj python3-tk tesseract-ocr tesseract-ocr-jpn`
 
 
 Arch Linux
@@ -30,7 +31,7 @@ Arch Linux
 
 Install pip, Tk, and Tesseract:
 
-`sudo pacman -S python-pip tk tesseract tesseract-data-jpn`
+`sudo pacman -S python-pip python-configobj tk tesseract tesseract-data-jpn`
 
 
 Gentoo
@@ -41,7 +42,7 @@ either have `ja` in your L10N or specify `l10n_ja` as an USE flag for Tesseract.
 
 Install pip and Tesseract:
 
-`sudo emerge -a dev-python/pip app-lang/tesseract`
+`sudo emerge -a dev-python/pip dev-python/configobj app-lang/tesseract`
 
 Install various python modules:
 -------------------------------
@@ -53,6 +54,9 @@ Install various python modules:
 `./Reader.py /path/to/manga`
 
 The manga can be a zip, rar, tar, or just a plain old directory.
+
+OCR-Manga accepts a configuration file in ``~/.config/OCR-Manga/config``.
+See the [options](https://github.com/Dudemanguy911/OCR-Manga/blob/master/options.md) page for a list of default options and their key bindings.
 
 ## Contributions
 
